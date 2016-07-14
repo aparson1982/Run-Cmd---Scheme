@@ -1,0 +1,5 @@
+(define (run-cmd command par1 par2)
+	(cond ((eq? command 'add) (+ par1 par2))
+	((eq? command 'times) (* par1 par2))
+	((eq? command 'concat) (string-append (symbol->string par1) (symbol->string par2)))
+	(else (string-append "Unknown command: " (symbol->string command)))))
